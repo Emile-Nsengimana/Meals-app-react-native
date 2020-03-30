@@ -27,7 +27,9 @@ const CategoryScreen = props => {
         }}
       >
         <View>
-          <Text numberOfLines={2}>{items.item.title}</Text>
+          <Text style={styles.title} numberOfLines={2}>
+            {items.item.title}
+          </Text>
         </View>
       </TouchableOpacity>
     );
@@ -66,12 +68,17 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 10,
     margin: 10,
-    alignItems: "flex-end",
-    justifyContent: "flex-end",
+    alignItems: "center",
+    justifyContent: "center",
     shadowColor: "black",
     shadowOffset: { height: 1, width: 1 },
     shadowRadius: 2,
     shadowOpacity: 0.5,
     elevation: 4
+  },
+  title: {
+    fontFamily: "default-font-bold",
+    fontSize: 17,
+    textTransform: "uppercase"
   }
 });

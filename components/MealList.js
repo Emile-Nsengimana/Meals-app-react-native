@@ -14,7 +14,8 @@ const MealList = props => {
         image={items.item.imageUrl}
         onSelect={() => {
           props.navigation.push("MealDetails", {
-            mealId: items.item.id
+            mealId: items.item.id,
+            mealTitle: items.item.title
           });
         }}
       />
