@@ -3,15 +3,14 @@ import { View, Text, Switch, StyleSheet } from "react-native";
 import { Colors } from "../constants/constants";
 
 const SwitchBox = props => {
-  const { title, n } = props;
-  console.log(n);
+  const { title, status } = props;
   return (
     <View style={styles.filterBox}>
       <Text>{title}</Text>
       <Switch
         trackColor={{ true: Colors.primary }}
         thumbColor="whitesmoke"
-        value={n}
+        value={status}
       />
     </View>
   );

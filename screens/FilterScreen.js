@@ -17,10 +17,10 @@ const FilterScreen = props => {
     <View style={styles.screen}>
       <Text style={styles.title}>Available filter & restrictions</Text>
       <View>
-        <SwitchBox n="ss" title="Gluten free" active={isGlutenFree} />
-        <SwitchBox n="ss" title="Vegan" active={isVegan} />
-        <SwitchBox n="ss" title="Vegeterian" active={isVegeterian} />
-        <SwitchBox n="ss" title="Lactose free" active={isLactoseFree} />
+        <SwitchBox status={true} title="Gluten free" active={isGlutenFree} />
+        <SwitchBox status={true} title="Vegan" active={isVegan} />
+        <SwitchBox status={false} title="Vegeterian" active={isVegeterian} />
+        <SwitchBox status={false} title="Lactose free" active={isLactoseFree} />
       </View>
     </View>
   );
