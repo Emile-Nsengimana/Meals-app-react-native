@@ -1,9 +1,11 @@
+/** @format */
+
 import React from "react";
 import { View, Text, Switch, StyleSheet } from "react-native";
 import { Colors } from "../constants/constants";
 
 const SwitchBox = props => {
-  const { title, status } = props;
+  const { title, status, onChange } = props;
   return (
     <View style={styles.filterBox}>
       <Text>{title}</Text>
@@ -11,6 +13,7 @@ const SwitchBox = props => {
         trackColor={{ true: Colors.primary }}
         thumbColor="whitesmoke"
         value={status}
+        onValueChange={onChange}
       />
     </View>
   );
